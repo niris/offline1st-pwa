@@ -1,6 +1,16 @@
 # PWA with React + TypeScript + Vite +  Nginx 
 
-## Installation from the project source code 
+## Media Files Storage Using Git LFS
+This project utilizes Git Large File Storage (LFS) for managing large media files such as videos and 3D models. Git LFS is a Git extension that enables efficient handling of large files by storing them separately from the Git repository, thus improving repository performance and reducing the burden on the version control system.
+
+- If you haven't already installed Git LFS, you can do so by following the instructions provided in the official Git LFS documentation.
+
+- After installing Git LFS, media files included in this project will be automatically managed using Git LFS. When cloning or fetching the repository, make sure to have Git LFS installed and configured on your system to properly handle large media files.
+
+
+## Installation
+
+### Option 1: Installation from the project source code 
 
 1. Install dependencies
     ```
@@ -24,9 +34,9 @@ docker run -v `PATH_TO_PROJECT`/media:/usr/share/nginx/html:ro -v `PATH_TO_PROJE
 
     PS: While running the app in development mode, there might be limitations for testing PWA offline mode comprehensively. For thorough testing of PWA features like offline mode, it's recommended to build and serve the app in a production-like environment.
 
-## For project installation & configuration from scratch ([Reference](https://www.saurabhmisra.dev/setup-react-pwa-using-vite/))
+### 2. For project installation & configuration from scratch ([Reference](https://www.saurabhmisra.dev/setup-react-pwa-using-vite/))
 
-### PWA Config
+#### PWA Config
 1. Install Vite + React starter project
     
     ```
@@ -59,7 +69,7 @@ docker run -v `PATH_TO_PROJECT`/media:/usr/share/nginx/html:ro -v `PATH_TO_PROJE
 
 5. Add an NPM script in package.json for generating PWA assets
     
-    ```json
+    ```
     {
       "scripts": {
         "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.svg"
@@ -77,7 +87,7 @@ docker run -v `PATH_TO_PROJECT`/media:/usr/share/nginx/html:ro -v `PATH_TO_PROJE
 
 8. Add `<link>` and `<meta>` tags for PWA assets in index.html
     
-    ```html
+    ```
     <head>
       <!-- other tags -->
       <link rel="icon" href="/favicon.ico" />
@@ -86,14 +96,14 @@ docker run -v `PATH_TO_PROJECT`/media:/usr/share/nginx/html:ro -v `PATH_TO_PROJE
       <meta name="theme-color" content="#ffffff">
     </head>
     ```
-### Three.js config  for 3D model rendering
+#### Three.js config  for 3D model rendering
    
     ```
     npm install three @types/three @react-three/fiber @react-three/drei
- 
     ```
 
-### Build app 
+#### Build app 
+
     ```
     npm run build
     npm run preview
@@ -104,3 +114,6 @@ docker run -v `PATH_TO_PROJECT`/media:/usr/share/nginx/html:ro -v `PATH_TO_PROJE
     ```
     npm run dev
     ```
+
+
+
