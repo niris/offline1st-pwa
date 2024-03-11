@@ -34,7 +34,7 @@ docker run -v `PATH_TO_PROJECT`/media:/usr/share/nginx/html:ro -v `PATH_TO_PROJE
 
     PS: While running the app in development mode, there might be limitations for testing PWA offline mode comprehensively. For thorough testing of PWA features like offline mode, it's recommended to build and serve the app in a production-like environment.
 
-### 2. For project installation & configuration from scratch ([Reference](https://www.saurabhmisra.dev/setup-react-pwa-using-vite/))
+### Option 2: Installation & configuration from scratch ([Reference](https://www.saurabhmisra.dev/setup-react-pwa-using-vite/))
 
 #### PWA Config
 1. Install Vite + React starter project
@@ -96,24 +96,21 @@ docker run -v `PATH_TO_PROJECT`/media:/usr/share/nginx/html:ro -v `PATH_TO_PROJE
       <meta name="theme-color" content="#ffffff">
     </head>
     ```
-#### Three.js config  for 3D model rendering
-   
-    ```
+9. Three.js config  for 3D model rendering
+   ```
     npm install three @types/three @react-three/fiber @react-three/drei
-    ```
+   ```
 
-#### Build app 
-
-    ```
+10. Build app 
+   ```
     npm run build
     npm run preview
-    ```
+   ```
+   or run the app in development mode 
    
-    or run the app in development mode 
-   
-    ```
+   ```
     npm run dev
-    ```
+   ```
 
 
 
