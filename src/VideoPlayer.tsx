@@ -26,7 +26,7 @@ const VideoPlayer: React.FC = () => {
   return (
     <div style={{ textAlign: "center" }}>
       {videoSrc && (
-        <video controls>
+        <video controls preload="metadata">
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
