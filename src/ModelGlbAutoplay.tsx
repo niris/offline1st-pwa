@@ -12,12 +12,9 @@ export function ModelGlbAutoplay(props: JSX.IntrinsicElements["group"]) {
 
   useEffect(() => {
     async function fetchModel() {
-      const response = await fetch(
-        "http://localhost/models/house_animated.glb",
-        {
-          headers: { Accept: "application/octet-stream" },
-        }
-      );
+      const response = await fetch("/media/models/house_animated.glb", {
+        headers: { Accept: "application/octet-stream" },
+      });
       const blob = await response.blob();
       const arrayBuffer = await blob.arrayBuffer();
       const loader = new GLTFLoader();

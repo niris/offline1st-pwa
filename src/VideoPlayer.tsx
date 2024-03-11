@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./VideoPlayer.css"; // Import CSS file
 
 const VideoPlayer: React.FC = () => {
   const [videoSrc, setVideoSrc] = useState<string | null>(null);
@@ -7,7 +8,7 @@ const VideoPlayer: React.FC = () => {
     async function fetchVideo() {
       try {
         const response = await fetch(
-          "http://localhost/videos/big_buck_bunny_720p_surround.mp4",
+          "/media/videos/big_buck_bunny_720p_surround.mp4",
           { headers: { Accept: "video/mp4" } }
         );
         console.log("Video response", response);
@@ -23,7 +24,7 @@ const VideoPlayer: React.FC = () => {
   console.log("Fetching video...From server", videoSrc);
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       {videoSrc && (
         <video controls>
           <source src={videoSrc} type="video/mp4" />

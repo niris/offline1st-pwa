@@ -1,0 +1,8 @@
+video {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  text-align: center;
+}

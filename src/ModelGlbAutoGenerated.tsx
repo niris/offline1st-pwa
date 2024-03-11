@@ -48,7 +48,7 @@ export function Model3DViewer(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<Group>(null);
   const { nodes, materials, animations } = useLoader(
     GLTFLoader,
-    "blob:http://localhost:4173/6a7a5cda-0fd1-4714-9b46-59a13e6c7913"
+    "/media/models/house_animated.glb"
   ) as GLTFResult;
 
   console.log("Nodes", nodes);
@@ -251,5 +251,5 @@ export function Model3DViewer(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("http://localhost/models/house_animated.glb");
+useGLTF.preload("/media/models/house_animated.glb");
 export default Model3DViewer;

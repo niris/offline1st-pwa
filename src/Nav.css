@@ -1,9 +1,4 @@
 .nav {
-  padding-bottom: 2.5em;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  padding-bottom: 1em;
+  margin: 0 auto;
 }
